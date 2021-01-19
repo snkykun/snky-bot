@@ -5,7 +5,7 @@ client = commands.Bot(command_prefix = '.')
 annoying = ()
 @client.event
 async def on_ready():
-    print('Bot is ready.')
+    print('Bot is ready')
 
 @client.command()
 async def react(ctx, member : discord.Member):
