@@ -2,6 +2,8 @@ import discord
 import pastas
 import botkey
 import emoji
+import asyncio
+import datetime
 from discord.ext import commands
 client = commands.Bot(command_prefix = '.')
 
@@ -42,10 +44,21 @@ async def on_message(message):
 
 ## commands
 @client.command()
+async def submit(ctx):
+    msg = ctx.message.content
+    if ctx.channel.id == 746754347764809869:
+        if 'https' in msg.lower():
+            await ctx.send('Thank you for your submission, a mod will approve/remove your frag shortly!')
+        elif msg[7:] == "":
+            await ctx.send(ctx.message.author.mention + ' Submit a frag by typing `.submit <replay code> <video link>`')
+        else:
+            await ctx.send(ctx.message.author.mention + ' You need a link displaying the frag you are submitting! Record it and upload to a site like streamable or youtube, then resubmit with `.submit <replay code> <video link>`')
+
+@client.command()
 @commands.has_role('Frag Approver')
 async def approve(ctx):
     channel = client.get_channel(790682495167234080)
-    await channel.send(ctx.message.reference.resolved.content + " hit by " + ctx.message.reference.resolved.author.mention)
+    await channel.send(ctx.message.reference.resolved.content[6:] + " hit by " + ctx.message.reference.resolved.author.mention)
 
 
 
