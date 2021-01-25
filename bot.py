@@ -1,5 +1,6 @@
 import discord
 import pastas
+import ClientID
 import emoji
 from discord.ext import commands
 client = commands.Bot(command_prefix = '.')
@@ -54,4 +55,4 @@ async def on_message(message):
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
-client.run('ODAxMTE5NzIxNDA3MTE5NDEx.YAcC4Q.qmAY0UNvK4lndiZh2knfeefKUc8')
+client.run(ClientID.ID)
