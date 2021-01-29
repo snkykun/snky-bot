@@ -19,13 +19,15 @@ async def on_ready():
 @client.listen()
 async def on_message(message):
   str = message.content
-  if message.author.id == 235751410979962892:
-      await message.add_reaction('<:cringe:585938141496475673>')
-  if message.author.id == 274656834315616256:
-      await message.add_reaction('<:cryingcat:796506331523055686>')
-  if 'come' in str.lower() and message.author.id != 801119721407119411:
-    await message.add_reaction('👎')
-    await message.channel.send('*cum')
+  # if message.author.id == 235751410979962892:
+  #     await message.add_reaction('<:cringe:585938141496475673>')
+  # if message.author.id == 274656834315616256:
+  #     await message.add_reaction('<:cryingcat:796506331523055686>')
+
+
+  if 'cum' in str.lower() and message.author.id != 801119721407119411:
+    # await message.add_reaction('👎')
+    await message.channel.send('cum')
 
   if 'goat' in str.lower() and message.author.id != 801119721407119411:
       await message.channel.send(pastas.goat)
@@ -58,7 +60,8 @@ async def submit(ctx):
 @commands.has_role('Frag Approver')
 async def approve(ctx):
     channel = client.get_channel(790682495167234080)
-    await channel.send(ctx.message.reference.resolved.content[6:] + " hit by " + ctx.message.reference.resolved.author.mention)
+    await channel.send(ctx.message.reference.resolved.content[7:] + " hit by " + ctx.message.reference.resolved.author.mention)
+
 
 
 

@@ -1,0 +1,5 @@
+asyncio
+discord
+discord.py
+emoji
+datetime
