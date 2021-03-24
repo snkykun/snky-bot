@@ -7,3 +7,5 @@ based = "Based? Based on what? In your dick? Please shut the fuck up and use wor
 simp = "What the fuck man. I'm literally sitting here on the verge of tears. Slaving away in this dead end job saving up for the end of the month splash. I was this close. Maybe I should have done that overtime, if I could get her that money earlier I might have been able to convince her in the dono message. She needs a man that can treat her right, a man like me. I would open the car door for her EVERY TIME, I would pull out her chair at a restaurant, I would lay my twitch hoodie over puddles to protect her from the filth."
 
 pee = "Pee is currently dripping down my leg, it is warm. :)"
+
+furry = "I'm not a furry, I swear! I just really, really like anthropomorphic animals and the artistic potential you can get out of them. I mean, sure I drew what is essentially an anthropomorphic bunny as a new OC as of recent, but doesn't mean I'm a furry! Sure, I love looking at other people's art and it may steadily be becoming a part of my visual aesthetic, but I'll tell you yet again: I AM NOT A FURRY. I never will be, I would feel great shame if I were a furry."

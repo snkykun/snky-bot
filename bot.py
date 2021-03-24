@@ -19,8 +19,8 @@ async def on_ready():
 @client.listen()
 async def on_message(message):
   str = message.content
-  # if message.author.id == 235751410979962892:
-  #     await message.add_reaction('<:cringe:585938141496475673>')
+  # if message.author.id == 390308146293243904:
+  #     await message.add_reaction('🐒')
   # if message.author.id == 274656834315616256:
   #     await message.add_reaction('<:cryingcat:796506331523055686>')
 
@@ -38,11 +38,14 @@ async def on_message(message):
   if 'based' in str.lower() and message.author.id != 801119721407119411 and message.channel.is_nsfw():
     await message.channel.send(pastas.based)
 
-  if 'simp' in str.lower() and message.author.id != 801119721407119411:
+  if 'simp' in str.lower() and message.author.id != 801119721407119411 and 'simple' not in str.lower():
     await message.channel.send(pastas.simp)
 
-  if 'pee' in str.lower() and message.author.id != 801119721407119411:
+  if 'pee' in str.lower() and message.author.id != 801119721407119411 and 'peepo' not in str.lower():
     await message.channel.send(pastas.pee)
+
+  if 'furry' in str.lower() and message.author.id != 801119721407119411:
+    await message.channel.send(pastas.furry)
 
 ## commands
 @client.command()
@@ -50,7 +53,10 @@ async def submit(ctx):
     msg = ctx.message.content
     if ctx.channel.id == 746754347764809869:
         if 'https' in msg.lower():
-            await ctx.send('Thank you for your submission, a mod will approve/remove your frag shortly!')
+            await ctx.send('Thank you for your submission, a mod will approve/remove your frag shortly! Other members may vote by reacting to the submission with the corresponding emojis.')
+            await ctx.message.add_reaction('✔️')
+            await ctx.message.add_reaction('❌')
+
         elif msg[7:] == "":
             await ctx.send(ctx.message.author.mention + ' Submit a frag by typing `.submit <replay code> <video link>`')
         else:
