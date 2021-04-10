@@ -3,3 +3,5 @@ discord
 discord.py
 emoji
 datetime
+os
+sys
