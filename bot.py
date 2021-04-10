@@ -1,13 +1,17 @@
 import discord
+import os
+import sys
 import pastas
 import botkey
 import emoji
 import asyncio
 import datetime
 from discord.ext import commands
+from discord import Embed, File
 client = commands.Bot(command_prefix = '.')
 
 ## Setup
+os.chdir(os.path.dirname(sys.argv[0]))
 @client.event
 async def on_ready():
     print('Bot is ready')
@@ -35,8 +39,14 @@ async def on_message(message):
   if 'innit' in str.lower() and message.author.id != 801119721407119411:
     await message.channel.send(pastas.innit)
 
+  if 'kephrii' in str.lower() and message.author.id != 801119721407119411:
+    await message.channel.send(pastas.kephrii)
+
   if 'based' in str.lower() and message.author.id != 801119721407119411 and message.channel.is_nsfw():
     await message.channel.send(pastas.based)
+
+  if 'shadowplay' in str.lower() and message.author.id != 801119721407119411:
+    await message.channel.send(file=File("./data/chadowplay.mp4"))
 
   if 'simp' in str.lower() and message.author.id != 801119721407119411 and 'simple' not in str.lower():
     await message.channel.send(pastas.simp)

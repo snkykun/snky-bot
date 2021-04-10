@@ -9,3 +9,5 @@ simp = "What the fuck man. I'm literally sitting here on the verge of tears. Sla
 pee = "Pee is currently dripping down my leg, it is warm. :)"
 
 furry = "I'm not a furry, I swear! I just really, really like anthropomorphic animals and the artistic potential you can get out of them. I mean, sure I drew what is essentially an anthropomorphic bunny as a new OC as of recent, but doesn't mean I'm a furry! Sure, I love looking at other people's art and it may steadily be becoming a part of my visual aesthetic, but I'll tell you yet again: I AM NOT A FURRY. I never will be, I would feel great shame if I were a furry."
+
+kephrii = "I made $20,000 last month. I don't care for your reactions. Don't value your attention so highly. I truly don't care. This is my amusement merely while I eat."
