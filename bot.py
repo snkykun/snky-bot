@@ -28,11 +28,10 @@ async def on_message(message):
   # if message.author.id == 274656834315616256:
   #     await message.add_reaction('<:cryingcat:796506331523055686>')
 
-  if message.channel.id == 814613616950902834:
+  if message.channel.id == 814613616950902834 and len(message.embeds) > 0:
       channel = client.get_channel(565401767416692747)
-      # embed = message.embed
-      return message.content
-      # await channel.send(embed[0])
+      embed = discord.Embed.copy(message.embeds[0])
+      await channel.send(embed=embed)
 
 
   if 'cum' in str.lower() and message.author.id != 801119721407119411:
