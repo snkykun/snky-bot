@@ -30,7 +30,9 @@ async def on_message(message):
 
   if message.channel.id == 814613616950902834:
       channel = client.get_channel(565401767416692747)
-      await channel.send(ctx.message.reference.resolved.content)
+      # embed = message.embed
+      return message.content
+      # await channel.send(embed[0])
 
 
   if 'cum' in str.lower() and message.author.id != 801119721407119411:
