@@ -1,4 +1,5 @@
 import discord
+import random
 import os
 import sys
 import pastas
@@ -76,6 +77,10 @@ async def submit(ctx):
             await ctx.send(ctx.message.author.mention + ' Submit a frag by typing `.submit <replay code> <video link>`')
         else:
             await ctx.send(ctx.message.author.mention + ' You need a link displaying the frag you are submitting! Record it and upload to a site like streamable or youtube, then resubmit with `.submit <replay code> <video link>`')
+
+@client.command()
+async def possum(ctx):
+    await ctx.channel.send(file=File("./data/possum/" + random.choice(os.listdir(".\data\possum"))))
 
 @client.command()
 @commands.has_role('Frag Approver')
