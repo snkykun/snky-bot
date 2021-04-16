@@ -96,6 +96,10 @@ async def possum(ctx):
 async def floppa(ctx):
     await ctx.channel.send(file=File("./data/floppa/" + random.choice(os.listdir("./data/floppa"))))
 
+@client.command()
+async def cat(ctx):
+    await ctx.channel.send(file=File("./data/cat/" + random.choice(os.listdir("./data/cat"))))
+
 # for pics in picList:
 #     @client.command()
 #     async def pics(ctx):
