@@ -80,7 +80,10 @@ async def submit(ctx):
 
 @client.command()
 async def possum(ctx):
-    await ctx.channel.send(file=File("./data/possum/" + random.choice(os.listdir(".\data\possum"))))
+    await ctx.channel.send(file=File("./data/possum/" + random.choice(os.listdir("./data/possum"))))
+@client.command()
+    async def freestyle(ctx):
+        ctx.channel.send('Nvidia Freestyle in Overwatch guide https://github.com/snkykun/Overwatch-Freestyle')
 
 @client.command()
 @commands.has_role('Frag Approver')
