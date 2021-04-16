@@ -18,7 +18,7 @@ async def on_ready():
     print('Bot is ready')
     custom = discord.Game('snky.cc')
     await client.change_presence(status=discord.Status.online, activity=custom)
-
+picList = ["floppa", "possum"]
 
 ## Pastas
 @client.listen()
@@ -54,6 +54,9 @@ async def on_message(message):
   if 'shadowplay' in str.lower() and message.author.id != 801119721407119411:
     await message.channel.send(file=File("./data/chadowplay.mp4"))
 
+  if 'cock' in str.lower() and message.author.id != 801119721407119411:
+    await message.channel.send('and balls (never forget the balls.)')
+
   if 'simp' in str.lower() and message.author.id != 801119721407119411 and 'simple' not in str.lower():
     await message.channel.send(pastas.simp)
 
@@ -78,9 +81,20 @@ async def submit(ctx):
         else:
             await ctx.send(ctx.message.author.mention + ' You need a link displaying the frag you are submitting! Record it and upload to a site like streamable or youtube, then resubmit with `.submit <replay code> <video link>`')
 
+
 @client.command()
 async def possum(ctx):
     await ctx.channel.send(file=File("./data/possum/" + random.choice(os.listdir("./data/possum"))))
+
+@client.command()
+async def floppa(ctx):
+    await ctx.channel.send(file=File("./data/floppa/" + random.choice(os.listdir("./data/floppa"))))
+
+# for pics in picList:
+#     @client.command()
+#     async def pics(ctx):
+#         await ctx.channel.send(file=File("./data/" + str(pics) + "/" + random.choice(os.listdir("./data/" + str(pics)))))
+
 @client.command()
 async def freestyle(ctx):
     ctx.channel.send('Nvidia Freestyle in Overwatch guide https://github.com/snkykun/Overwatch-Freestyle')
