@@ -19,52 +19,58 @@ async def on_ready():
     custom = discord.Game('snky.cc')
     await client.change_presence(status=discord.Status.online, activity=custom)
 picList = ["floppa", "possum"]
+paster = ["goat", "innit", "based", "simp", "pee", "furry", "kephrii"]
 
 ## Pastas
 @client.listen()
 async def on_message(message):
-  str = message.content
+    if message.author.id != 801119721407119411:
+        str = message.content
   # if message.author.id == 390308146293243904:
   #     await message.add_reaction('🐒')
   # if message.author.id == 274656834315616256:
   #     await message.add_reaction('<:cryingcat:796506331523055686>')
+        if message.channel.id == 814613616950902834 and len(message.embeds) > 0:
+            channel = client.get_channel(565401767416692747)
+            embed = discord.Embed.copy(message.embeds[0])
+            await channel.send(embed=embed)
+        #
+        # for x in paster:
+        #     if x in str.lower():
+        #         paste = pastas.(x)
+        #         await message.channel.send(paste)
 
-  if message.channel.id == 814613616950902834 and len(message.embeds) > 0:
-      channel = client.get_channel(565401767416692747)
-      embed = discord.Embed.copy(message.embeds[0])
-      await channel.send(embed=embed)
+
+# STANDALONE TRIGGERS
+        if 'cum' in str.lower():
+            # await message.add_reaction('👎')
+            await message.channel.send('cum')
+        if 'shadowplay' in str.lower():
+                await message.channel.send(file=File("./data/chadowplay.mp4"))
+        if 'cock' in str.lower():
+            await message.channel.send('and balls (never forget the balls.)')
 
 
-  if 'cum' in str.lower() and message.author.id != 801119721407119411:
-    # await message.add_reaction('👎')
-    await message.channel.send('cum')
+        if 'goat' in str.lower():
+            await message.channel.send(pastas.goat)
 
-  if 'goat' in str.lower() and message.author.id != 801119721407119411:
-      await message.channel.send(pastas.goat)
+        if 'innit' in str.lower():
+            await message.channel.send(pastas.innit)
 
-  if 'innit' in str.lower() and message.author.id != 801119721407119411:
-    await message.channel.send(pastas.innit)
+        if 'kephrii' in str.lower():
+            await message.channel.send(pastas.kephrii)
 
-  if 'kephrii' in str.lower() and message.author.id != 801119721407119411:
-    await message.channel.send(pastas.kephrii)
+        if 'based' in str.lower()and message.channel.is_nsfw():
+            await message.channel.send(pastas.based)
 
-  if 'based' in str.lower() and message.author.id != 801119721407119411 and message.channel.is_nsfw():
-    await message.channel.send(pastas.based)
+        if 'simp' in str.lower() and 'simple' not in str.lower():
+            await message.channel.send(pastas.simp)
 
-  if 'shadowplay' in str.lower() and message.author.id != 801119721407119411:
-    await message.channel.send(file=File("./data/chadowplay.mp4"))
+        if 'pee' in str.lower() and 'peepo' not in str.lower():
+            await message.channel.send(pastas.pee)
 
-  if 'cock' in str.lower() and message.author.id != 801119721407119411:
-    await message.channel.send('and balls (never forget the balls.)')
-
-  if 'simp' in str.lower() and message.author.id != 801119721407119411 and 'simple' not in str.lower():
-    await message.channel.send(pastas.simp)
-
-  if 'pee' in str.lower() and message.author.id != 801119721407119411 and 'peepo' not in str.lower():
-    await message.channel.send(pastas.pee)
-
-  if 'furry' in str.lower() and message.author.id != 801119721407119411:
-    await message.channel.send(pastas.furry)
+        if 'furry' in str.lower():
+            await message.channel.send(pastas.furry)
 
 ## commands
 @client.command()
@@ -97,7 +103,7 @@ async def floppa(ctx):
 
 @client.command()
 async def freestyle(ctx):
-    ctx.channel.send('Nvidia Freestyle in Overwatch guide https://github.com/snkykun/Overwatch-Freestyle')
+    await ctx.channel.send('Nvidia Freestyle in Overwatch guide https://github.com/snkykun/Overwatch-Freestyle')
 
 @client.command()
 @commands.has_role('Frag Approver')
