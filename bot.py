@@ -23,12 +23,11 @@ os.chdir(os.path.dirname(sys.argv[0]))
 async def on_ready():
     oec_gen = client.get_channel(743941628984557711)
     sai_gen = client.get_channel(565401084718481410)
-    YoutubeAPI.playlistUpdate()
     print('Bot is ready')
     custom = discord.Game('snky.cc')
     await client.change_presence(status=discord.Status.online, activity=custom)
-    await oec_gen.send('Bot is ready with ' + str(len(YoutubeAPI.vid_ids)) + ' videos cached.')
-    await sai_gen.send('Bot is ready, hampter.')
+    await oec_gen.send('Bot is ready, hampter.')
+    await sai_gen.send('Bot is ready, time to post hampters.')
 picList = ["floppa", "possum"]
 paster = ["goat", "innit", "based", "simp", "pee", "furry", "kephrii"]
 
@@ -85,14 +84,6 @@ async def on_message(message):
 
 ## commands
 @client.command()
-async def edit(ctx, *, source=None):
-    if source == 'source':
-        await ctx.send('Videos are sourced from this playlist here: https://www.youtube.com/playlist?list=PL-qDtdxHx3uLL7QVV3hXh08tKJU5PHy-5')
-    else:
-        vid_link = 'https://www.youtube.com/watch?v=' + str(random.choice(YoutubeAPI.vid_ids))
-        await ctx.send(vid_link)
-
-@client.command()
 async def submit(ctx, code=None, link=None):
     msg = ctx.message.content
     if ctx.channel.id == 746754347764809869:
@@ -131,18 +122,23 @@ async def approve(ctx):
     channel = client.get_channel(790682495167234080)
     await channel.send(ctx.message.reference.resolved.content[7:] + " hit by " + ctx.message.reference.resolved.author.mention)
 
-
-
-
-# @client.listen()
-# @commands.has_role('Frag Approver')
-# async def on_message(msg):
-#   if msg.author.id != 801119721407119411 and msg.channel.id == 803087684779114516:
-#       await msg.channel.send('1')
-
 @client.command()
 @commands.has_permissions(manage_messages=True)
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
 client.run(botkey.key)
+
+# @client.command()
+# async def edit(ctx, *, source=None):
+#     if source == 'source':
+#         await ctx.send('Videos are sourced from this playlist here: https://www.youtube.com/playlist?list=PL-qDtdxHx3uLL7QVV3hXh08tKJU5PHy-5')
+#     else:
+#         vid_link = 'https://www.youtube.com/watch?v=' + str(random.choice(YoutubeAPI.vid_ids))
+#         await ctx.send(vid_link)
+
+# @client.listen()
+# @commands.has_role('Frag Approver')
+# async def on_message(msg):
+#   if msg.author.id != 801119721407119411 and msg.channel.id == 803087684779114516:
+#       await msg.channel.send('1')
