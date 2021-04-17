@@ -4,20 +4,31 @@ import os
 import sys
 import pastas
 import botkey
+import ytSECRET
+import YoutubeAPI
 import emoji
 import asyncio
 import datetime
 from discord.ext import commands
 from discord import Embed, File
+import google_auth_oauthlib.flow
+import googleapiclient.discovery
+import googleapiclient.errors
+from googleapiclient.discovery import build
 client = commands.Bot(command_prefix = '.')
 
 ## Setup
 os.chdir(os.path.dirname(sys.argv[0]))
 @client.event
 async def on_ready():
+    oec_gen = client.get_channel(743941628984557711)
+    sai_gen = client.get_channel(565401084718481410)
+    YoutubeAPI.playlistUpdate()
     print('Bot is ready')
     custom = discord.Game('snky.cc')
     await client.change_presence(status=discord.Status.online, activity=custom)
+    await oec_gen.send('Bot is ready with ' + str(len(YoutubeAPI.vid_ids)) + ' videos cached.')
+    await sai_gen.send('Bot is ready, hampter.')
 picList = ["floppa", "possum"]
 paster = ["goat", "innit", "based", "simp", "pee", "furry", "kephrii"]
 
@@ -74,18 +85,23 @@ async def on_message(message):
 
 ## commands
 @client.command()
-async def submit(ctx):
+async def edit(ctx, *, source=None):
+    if source == 'source':
+        await ctx.send('Videos are sourced from this playlist here: https://www.youtube.com/playlist?list=PL-qDtdxHx3uLL7QVV3hXh08tKJU5PHy-5')
+    else:
+        vid_link = 'https://www.youtube.com/watch?v=' + str(random.choice(YoutubeAPI.vid_ids))
+        await ctx.send(vid_link)
+
+@client.command()
+async def submit(ctx, code=None, link=None):
     msg = ctx.message.content
     if ctx.channel.id == 746754347764809869:
-        if 'https' in msg.lower():
+        if 'https' in link.lower() and code != None:
             await ctx.send('Thank you for your submission, a mod will approve/remove your frag shortly! Other members may vote by reacting to the submission with the corresponding emojis.')
             await ctx.message.add_reaction('✔️')
             await ctx.message.add_reaction('❌')
-
-        elif msg[7:] == "":
-            await ctx.send(ctx.message.author.mention + ' Submit a frag by typing `.submit <replay code> <video link>`')
         else:
-            await ctx.send(ctx.message.author.mention + ' You need a link displaying the frag you are submitting! Record it and upload to a site like streamable or youtube, then resubmit with `.submit <replay code> <video link>`')
+            await ctx.send(ctx.message.author.mention + ' Submit a frag by typing `.submit <replay code> <video link>`')
 
 
 @client.command()
