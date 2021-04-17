@@ -127,6 +127,12 @@ async def approve(ctx):
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
+@client.command()
+async def servers(ctx):
+  servers = list(client.guilds)
+  await ctx.send(f"Connected on {str(len(servers))} servers:")
+  await ctx.send('\n'.join(guild.name for guild in servers))
+
 client.run(botkey.key)
 
 # @client.command()
