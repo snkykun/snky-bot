@@ -11,10 +11,10 @@ import asyncio
 import datetime
 from discord.ext import commands
 from discord import Embed, File
-import google_auth_oauthlib.flow
-import googleapiclient.discovery
-import googleapiclient.errors
-from googleapiclient.discovery import build
+# import google_auth_oauthlib.flow
+# import googleapiclient.discovery
+# import googleapiclient.errors
+# from googleapiclient.discovery import build
 client = commands.Bot(command_prefix = '.')
 
 ## Setup
@@ -26,8 +26,8 @@ async def on_ready():
     print('Bot is ready')
     custom = discord.Game('snky.cc')
     await client.change_presence(status=discord.Status.online, activity=custom)
-    await oec_gen.send('Bot is ready, hampter.')
-    await sai_gen.send('Bot is ready, time to post hampters.')
+    # await oec_gen.send('Bot is ready, hampter.')
+    # await sai_gen.send('Bot is ready, time to post hampters.')
 picList = ["floppa", "possum"]
 paster = ["goat", "innit", "based", "simp", "pee", "furry", "kephrii"]
 
