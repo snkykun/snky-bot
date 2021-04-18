@@ -34,6 +34,14 @@ paster = ["goat", "innit", "based", "simp", "pee", "furry", "kephrii"]
 ## Pastas
 @client.listen()
 async def on_message(message):
+
+    if message.channel.id == 743941744927834133:
+        str = message.content
+
+        if 'gone' in str.lower():
+            await message.add_reaction('<:peepoSad:820015915676336180>')
+        else:
+            await message.add_reaction('<:Pog:820015969966751815>')
     if message.author.id != 801119721407119411:
         str = message.content
   # if message.author.id == 390308146293243904:
