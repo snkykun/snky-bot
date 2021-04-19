@@ -93,27 +93,31 @@ async def on_message(message):
 ## commands
 @client.command()
 async def submit(ctx, code=None, link=None):
-    msg = ctx.message.content
-    if ctx.channel.id == 746754347764809869:
-        if 'https' in link.lower() and code != None:
-            await ctx.send('Thank you for your submission, a mod will approve/remove your frag shortly! Other members may vote by reacting to the submission with the corresponding emojis.')
-            await ctx.message.add_reaction('✔️')
-            await ctx.message.add_reaction('❌')
-        else:
-            await ctx.send(ctx.message.author.mention + ' Submit a frag by typing `.submit <replay code> <video link>`')
+    async with ctx.channel.typing():
+        msg = ctx.message.content
+        if ctx.channel.id == 746754347764809869:
+            if 'https' in link.lower() and code != None:
+                await ctx.send('Thank you for your submission, a mod will approve/remove your frag shortly! Other members may vote by reacting to the submission with the corresponding emojis.')
+                await ctx.message.add_reaction('✔️')
+                await ctx.message.add_reaction('❌')
+            else:
+                await ctx.send(ctx.message.author.mention + ' Submit a frag by typing `.submit <replay code> <video link>`')
 
 
 @client.command()
 async def possum(ctx):
-    await ctx.channel.send(file=File("./data/possum/" + random.choice(os.listdir("./data/possum"))))
+    async with ctx.channel.typing():
+        await ctx.channel.send(file=File("./data/possum/" + random.choice(os.listdir("./data/possum"))))
 
 @client.command()
 async def floppa(ctx):
-    await ctx.channel.send(file=File("./data/floppa/" + random.choice(os.listdir("./data/floppa"))))
+    async with ctx.channel.typing():
+        await ctx.channel.send(file=File("./data/floppa/" + random.choice(os.listdir("./data/floppa"))))
 
 @client.command()
 async def cat(ctx):
-    await ctx.channel.send(file=File("./data/cat/" + random.choice(os.listdir("./data/cat"))))
+    async with ctx.channel.typing():
+        await ctx.channel.send(file=File("./data/cat/" + random.choice(os.listdir("./data/cat"))))
 
 # for pics in picList:
 #     @client.command()
