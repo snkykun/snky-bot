@@ -65,6 +65,8 @@ async def on_message(message):
             await message.channel.send('cum')
         if 'shadowplay' in str.lower():
                 await message.channel.send(file=File("./data/chadowplay.mp4"))
+        if 'mercy montage' in str.lower():
+                await message.channel.send(file=File("./data/MercyMontage-nMTj67b_Boc.mp4"))
         if 'cock' in str.lower():
             await message.channel.send('and balls (never forget the balls.)')
 
