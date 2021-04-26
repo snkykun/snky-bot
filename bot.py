@@ -80,17 +80,20 @@ async def on_message(message):
         if 'kephrii' in str.lower():
             await message.channel.send(pastas.kephrii)
 
-        if 'based' in str.lower()and message.channel.is_nsfw():
+        if 'based' in str.lower():
             await message.channel.send(pastas.based)
 
         if 'simp' in str.lower() and 'simple' not in str.lower():
             await message.channel.send(pastas.simp)
 
-        if 'pee' in str.lower() and 'peepo' not in str.lower():
+        if 'pee ' in str.lower() or 'piss' in str.lower():
             await message.channel.send(pastas.pee)
 
         if 'furry' in str.lower():
             await message.channel.send(pastas.furry)
+
+        if 'cringe' in str.lower():
+            await message.channel.send(pastas.cringe)
 
 ## commands
 @client.command()
@@ -103,7 +106,6 @@ async def submit(ctx, code=None, link=None):
             await ctx.message.add_reaction('❌')
         else:
             await ctx.send(ctx.message.author.mention + ' Submit a frag by typing `.submit <replay code> <video link>`')
-
 
 @client.command()
 async def possum(ctx):
