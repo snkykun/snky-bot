@@ -127,9 +127,13 @@ async def cat(ctx):
 #     async def pics(ctx):
 #         await ctx.channel.send(file=File("./data/" + str(pics) + "/" + random.choice(os.listdir("./data/" + str(pics)))))
 
-@client.command()
-async def freestyle(ctx):
+@client.command(aliases=['freestyle', 'dof', 'reshade', 'greenscreen'])
+async def _freestyle(ctx):
     await ctx.channel.send('Nvidia Freestyle in Overwatch guide https://github.com/snkykun/Overwatch-Freestyle')
+
+@client.command(aliases=['dolly', 'cam', 'dollycam'])
+async def _dolly(ctx):
+    await ctx.channel.send('Creating an HLAE style dolly cam inside overwatch with AHK https://github.com/snkykun/Overwatch-Dolly')
 
 @client.command()
 @commands.has_role('Frag Approver')
