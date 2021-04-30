@@ -125,7 +125,7 @@ async def cat(ctx):
 @client.command(aliases=['monkey', 'monki', 'monke'])
 async def _monkey(ctx):
     async with ctx.channel.typing():
-        await ctx.channel.send(file=File("./data/cat/" + random.choice(os.listdir("./data/monkey"))))
+        await ctx.channel.send(file=File("./data/monkey/" + random.choice(os.listdir("./data/monkey"))))
 
 # for pics in picList:
 #     @client.command()
