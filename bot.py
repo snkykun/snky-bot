@@ -134,7 +134,7 @@ async def _monkey(ctx):
 
 @client.command(aliases=['freestyle', 'dof', 'reshade', 'greenscreen'])
 async def _freestyle(ctx):
-    await ctx.channel.send('Nvidia Freestyle in Overwatch guide https://github.com/snkykun/Overwatch-Freestyle')
+    await ctx.channel.send('Nvidia Freestyle in Overwatch guide https://youtu.be/lAEkQdQGRNA Text version: https://github.com/snkykun/Overwatch-Freestyle')
 
 @client.command(aliases=['dolly', 'cam', 'dollycam'])
 async def _dolly(ctx):
