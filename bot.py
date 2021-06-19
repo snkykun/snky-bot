@@ -95,6 +95,9 @@ async def on_message(message):
         if 'cringe' in str.lower():
             await message.channel.send(pastas.cringe)
 
+        if 'flashy' in str.lower():
+            await message.channel.send(pastas.flashy)
+
 ## commands
 @client.command()
 async def submit(ctx, code=None, link=None):
