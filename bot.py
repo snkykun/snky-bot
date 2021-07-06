@@ -82,7 +82,7 @@ async def on_message(message):
         if 'kephrii' in str.lower():
             await message.channel.send(pastas.kephrii)
 
-        if 'based' in str.lower():
+        if 'based' == str.lower():
             await message.channel.send(pastas.based)
 
         if 'simp' in str.lower() and 'simple' not in str.lower():
