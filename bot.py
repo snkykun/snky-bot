@@ -65,7 +65,7 @@ async def on_message(message):
             await message.channel.send('cum')
         if 'shadowplay' in str.lower():
                 await message.channel.send(file=File("./data/chadowplay.mp4"))
-        if 'scort' in str.lower():
+        if 'scort' in str.lower() and message.author.id != 355144450437021697:
                 await message.channel.send(file=File("./data/Retard-lf8zQN6agAw.mp4"))
         if 'mercy montage' in str.lower():
                 await message.channel.send(file=File("./data/MercyMontage-nMTj67b_Boc.mp4"))
