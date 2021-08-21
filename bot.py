@@ -69,6 +69,8 @@ async def on_message(message):
                 await message.channel.send(file=File("./data/Retard-lf8zQN6agAw.mp4"))
         if 'mercy montage' in str.lower():
                 await message.channel.send(file=File("./data/MercyMontage-nMTj67b_Boc.mp4"))
+        if 'peak' in str.lower():
+                await message.channel.send(file=File("./data/KW2fX8VRPVwcPYUC.mp4"))
         if 'cock' in str.lower():
             await message.channel.send('and balls (never forget the balls.)')
 
