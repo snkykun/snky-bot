@@ -139,6 +139,7 @@ async def _monkey(ctx):
 
 @client.command()
 async def ym(ctx):
+    await ctx.message.delete()
     await ctx.channel.send('YO MAMA')
 
 # for pics in picList:
