@@ -145,7 +145,7 @@ async def ym(ctx):
 @client.command()
 async def fym(ctx):
     embed = discord.Embed(
-    title = ctx.message.author.mention + "fucks " + (ctx.message.mentions[0]).mention + "'s mother"
+    title = ctx.message.author.display_name + " fucks " + (ctx.message.mentions[0]).display_name + "'s mother"
     )
     embed.set_footer(text='and everyone clapped..')
     embed.set_image(url='https://snky.cc/wp-content/uploads/2021/08/0920492834.gif')
