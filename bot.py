@@ -137,6 +137,10 @@ async def _monkey(ctx):
     async with ctx.channel.typing():
         await ctx.channel.send(file=File("./data/monkey/" + random.choice(os.listdir("./data/monkey"))))
 
+@client.command()
+async def ym(ctx):
+    await ctx.channel.send('YO MAMA')
+
 # for pics in picList:
 #     @client.command()
 #     async def pics(ctx):
