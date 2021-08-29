@@ -147,7 +147,7 @@ async def fym(ctx):
     embed = discord.Embed(
     title = ctx.message.author.mention + "fucks " + (ctx.message.mentions[0]).mention + "'s mother"
     )
-    embed.set_footer('and everyone clapped..')
+    embed.set_footer(text='and everyone clapped..')
     embed.set_image(url='https://snky.cc/wp-content/uploads/2021/08/0920492834.gif')
     await ctx.channel.send(embed=embed)
 
