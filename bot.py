@@ -142,6 +142,15 @@ async def ym(ctx):
     await ctx.channel.send('YO MAMA')
     await ctx.message.delete()
 
+@client.command()
+async def fym(ctx):
+    embed = discord.Embed(
+    title = ctx.message.author.mention + "fucks " + ctx.mentions[0] + "'s mother"
+    )
+    embed.set_footer('and everyone clapped..')
+    embed.set_image(url='https://snky.cc/wp-content/uploads/2021/08/0920492834.gif')
+    await ctx.channel.send(embed=embed)
+
 # for pics in picList:
 #     @client.command()
 #     async def pics(ctx):
