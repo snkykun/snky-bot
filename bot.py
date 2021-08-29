@@ -145,7 +145,7 @@ async def ym(ctx):
 @client.command()
 async def fym(ctx):
     embed = discord.Embed(
-    description = "*" + ctx.message.author.display_name + "* fucks *" + (ctx.message.mentions[0]).display_name + "'s* mother"
+    description = "**" + ctx.message.author.display_name + "** fucks **" + (ctx.message.mentions[0]).display_name + "'s** mother"
     )
     embed.set_footer(text='and everyone clapped..')
     embed.set_image(url='https://c.tenor.com/Ftt4ZlVWDUwAAAAC/mom-your-mom.gif')
