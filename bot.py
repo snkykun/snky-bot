@@ -144,12 +144,20 @@ async def ym(ctx):
 
 @client.command()
 async def fym(ctx):
-    embed = discord.Embed(
-    description = "**" + ctx.message.author.display_name + "** fucks **" + (ctx.message.mentions[0]).display_name + "'s** mother"
-    )
-    embed.set_footer(text='and everyone clapped..')
-    embed.set_image(url='https://c.tenor.com/Ftt4ZlVWDUwAAAAC/mom-your-mom.gif')
-    await ctx.channel.send(embed=embed)
+    if (ctx.message.mentions[0]).display_name == "Snky":
+        embed = discord.Embed(
+        description = "**Snky** fucks **" + ctx.message.author.display_name + "'s** mother"
+        )
+        embed.set_footer(text="you cannot fuck Snky's mother")
+        embed.set_image(url='https://c.tenor.com/GryShD35-psAAAAC/troll-face-creepy-smile.gif')
+        await ctx.channel.send(embed=embed)
+    else:
+        embed = discord.Embed(
+        description = "**" + ctx.message.author.display_name + "** fucks **" + (ctx.message.mentions[0]).display_name + "'s** mother"
+        )
+        embed.set_footer(text='and everyone clapped..')
+        embed.set_image(url='https://c.tenor.com/Ftt4ZlVWDUwAAAAC/mom-your-mom.gif')
+        await ctx.channel.send(embed=embed)
 
 # for pics in picList:
 #     @client.command()
