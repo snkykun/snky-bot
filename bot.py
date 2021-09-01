@@ -151,6 +151,9 @@ async def fym(ctx):
         embed.set_footer(text="you cannot fuck Snky's mother")
         embed.set_image(url='https://c.tenor.com/GryShD35-psAAAAC/troll-face-creepy-smile.gif')
         await ctx.channel.send(embed=embed)
+    if (ctx.message.mentions[0]).display_name == "OEC":
+        await ctx.channel.send("no")
+        await ctx.channel.send(file=File('./data/JdKRgS-6boMbY9nZ.mp4')
     else:
         embed = discord.Embed(
         description = "**" + ctx.message.author.display_name + "** fucks **" + (ctx.message.mentions[0]).display_name + "'s** mother"
