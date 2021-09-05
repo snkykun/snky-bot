@@ -77,7 +77,7 @@ async def on_message(message):
         # if message.author.id == 66056020786425856:
         #     await message.channel.send('this you? https://cdn.discordapp.com/avatars/66056020786425856/dfa93feb88c85a0183eac633d95e3007.webp?size=2048')
 
-        if 'goat' in str.lower():
+        if 'goats' in str.lower():
             await message.channel.send(pastas.goat)
 
         if 'innit' in str.lower():
@@ -142,6 +142,11 @@ async def _monkey(ctx):
 @client.command()
 async def ym(ctx):
     await ctx.channel.send('YO MAMA')
+    await ctx.message.delete()
+
+@client.command()
+async def real(ctx):
+    await ctx.channel.send('real')
     await ctx.message.delete()
 
 @client.command()
