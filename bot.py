@@ -73,7 +73,8 @@ async def on_message(message):
                 await message.channel.send(file=File("./data/KW2fX8VRPVwcPYUC.mp4"))
         if 'cock' in str.lower():
             await message.channel.send('and balls (never forget the balls.)')
-        if 'hampter' or 'hamster' in str.lower():
+
+        if 'hampter' in str.lower():
             await message.channel.send('https://tenor.com/view/hampter-gif-20240312')
         # if message.author.id == 66056020786425856:
         #     await message.channel.send('this you? https://cdn.discordapp.com/avatars/66056020786425856/dfa93feb88c85a0183eac633d95e3007.webp?size=2048')
