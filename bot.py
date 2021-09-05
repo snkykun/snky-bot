@@ -73,7 +73,9 @@ async def on_message(message):
                 await message.channel.send(file=File("./data/KW2fX8VRPVwcPYUC.mp4"))
         if 'cock' in str.lower():
             await message.channel.send('and balls (never forget the balls.)')
-
+            
+        if message.author.id == 66056020786425856:
+            await message.channel.send('y!pfp @scort#9899')
 
         if 'goat' in str.lower():
             await message.channel.send(pastas.goat)
