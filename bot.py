@@ -74,8 +74,8 @@ async def on_message(message):
         if 'cock' in str.lower():
             await message.channel.send('and balls (never forget the balls.)')
 
-        if message.author.id == 66056020786425856:
-            await message.channel.send('this you? https://cdn.discordapp.com/avatars/66056020786425856/dfa93feb88c85a0183eac633d95e3007.webp?size=2048')
+        # if message.author.id == 66056020786425856:
+        #     await message.channel.send('this you? https://cdn.discordapp.com/avatars/66056020786425856/dfa93feb88c85a0183eac633d95e3007.webp?size=2048')
 
         if 'goat' in str.lower():
             await message.channel.send(pastas.goat)
