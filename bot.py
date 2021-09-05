@@ -151,14 +151,14 @@ async def real(ctx):
 
 @client.command()
 async def fym(ctx):
-    if (ctx.message.mentions[0]).display_name == "Snky":
+    if (ctx.message.mentions[0]).id == 801119721407119411:
         embed = discord.Embed(
         description = "**Snky** fucks **" + ctx.message.author.display_name + "'s** mother"
         )
         embed.set_footer(text="you cannot fuck Snky's mother")
         embed.set_image(url='https://c.tenor.com/GryShD35-psAAAAC/troll-face-creepy-smile.gif')
         await ctx.channel.send(embed=embed)
-    elif (ctx.message.mentions[0]).display_name == "OEC":
+    elif (ctx.message.mentions[0]).id == 818622709655273532:
         await ctx.channel.send("no")
         await ctx.channel.send(file=File('./data/JdKRgS-6boMbY9nZ.mp4'))
     else:
