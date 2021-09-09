@@ -82,6 +82,9 @@ async def on_message(message):
         if 'goats' in str.lower():
             await message.channel.send(pastas.goat)
 
+        if 'ninja' in str.lower():
+            await message.channel.send(pastas.ninja)
+
         if 'innit' in str.lower():
             await message.channel.send(pastas.innit)
 
