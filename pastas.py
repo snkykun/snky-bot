@@ -1,4 +1,4 @@
-triggers = ["goat", "innit", "based", "simp", "pee piss", "furry", "kephrii", "cringe", "flashy", "ninja", "what are you doing", "cock", "cum", "peak", "hampter", 'mercy montage', "scort", "ratio", "shadowplay"]
+triggers = ["goat", "innit", "based", "simp", "piss", "furry", "kephrii", "cringe", "flashy", "ninja", "what are you doing", "cock", "cum", "peak", "hampter", 'mercy montage', "scort", "ratio", "shadowplay"]
 triggerResponse = [
 
 #goat
