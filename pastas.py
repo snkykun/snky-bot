@@ -1,4 +1,4 @@
-triggers = ["goat", "innit", "based", "simp", "pee piss", "furry", "kephrii", "cringe", "flashy", "ninja", "what are you doing", "cock", "cum", "peak", "hampter", 'mercy montage', "scort", "ratio"]
+triggers = ["goat", "innit", "based", "simp", "pee piss", "furry", "kephrii", "cringe", "flashy", "ninja", "what are you doing", "cock", "cum", "peak", "hampter", 'mercy montage', "scort", "ratio", "shadowplay"]
 triggerResponse = [
 
 #goat
@@ -53,7 +53,9 @@ triggerResponse = [
 "./data/Retard-lf8zQN6agAw.mp4",
 
 #ratio
-"counter"
+"counter",
 
+#shadowplay
+"./data/chadowplay.mp4"
 
 ]

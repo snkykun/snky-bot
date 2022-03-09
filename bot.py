@@ -4,8 +4,6 @@ import os
 import sys
 import pastas
 import botkey
-import ytSECRET
-import YoutubeAPI
 import emoji
 import asyncio
 import datetime
@@ -18,7 +16,7 @@ from discord import Embed, File
 client = commands.Bot(command_prefix = '.')
 
 # Setup
-os.chdir(os.path.dirname(sys.argv[0]))
+# os.chdir(os.path.dirname(sys.argv[0]))
 @client.event
 async def on_ready():
     oec_gen = client.get_channel(743941628984557711)
