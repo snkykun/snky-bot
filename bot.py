@@ -45,9 +45,9 @@ async def on_message(message):
         if 'ben' in msgStr:
             if '?' in msgStr:
                 await message.channel.send(file=File("./data/ben/" + str(benResponse[random.randint(0,4)])))
-            elif 'bye' or 'goodbye' in msgStr:
+            if 'bye' or 'goodbye' in msgStr:
                 await message.channel.send(file=File("./data/ben/slamphone.gif"))
-            elif 'ben' == msgStr:
+            if 'ben' == msgStr:
                 await message.channel.send(file=File("./data/ben/benring.gif"))
 
         # PASTAS
