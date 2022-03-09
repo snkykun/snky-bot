@@ -43,12 +43,14 @@ async def on_message(message):
 
         # BEN
         if 'ben' in msgStr:
-            if '?' in msgStr:
+            if '?' in message.content:
                 await message.channel.send(file=File("./data/ben/" + str(benResponse[random.randint(0,4)])))
-            if 'bye' or 'goodbye' in msgStr:
+            elif 'bye' in message.content:
                 await message.channel.send(file=File("./data/ben/slamphone.gif"))
-            if 'ben' == msgStr:
+                print("triggered ben bye")
+            elif 'ben' == message.content:
                 await message.channel.send(file=File("./data/ben/benring.gif"))
+                print("triggered ben only")
 
         # PASTAS
         for x in pastas.triggers:
