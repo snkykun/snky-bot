@@ -17,8 +17,8 @@ from discord import Embed, File
 # from googleapiclient.discovery import build
 client = commands.Bot(command_prefix = '.')
 
-## Setup
-# os.chdir(os.path.dirname(sys.argv[0]))
+# Setup
+os.chdir(os.path.dirname(sys.argv[0]))
 @client.event
 async def on_ready():
     oec_gen = client.get_channel(743941628984557711)
@@ -26,91 +26,104 @@ async def on_ready():
     print('Bot is ready')
     custom = discord.Game('snky.cc')
     await client.change_presence(status=discord.Status.online, activity=custom)
-    # await oec_gen.send('Bot is ready, hampter.')
-    await sai_gen.send('Bot is ready, time to post hampters.')
+    # await oec_gen.send('Bot is ready, cum to your hearts conent.')
+    # await sai_gen.send('Bot is ready, time to post hampters.')
 picList = ["floppa", "possum"]
-paster = ["goat", "innit", "based", "simp", "pee", "furry", "kephrii"]
+benResponse = ['eww.gif', 'laugh.gif', 'no.gif', 'slamphone.gif', 'yes.gif']
 
-## Pastas
+#listener
 @client.listen()
 async def on_message(message):
 
-    if message.channel.id == 743941744927834133:
-        str = message.content
-
-        if 'gone' in str.lower():
-            await message.add_reaction('<:peepoSad:820015915676336180>')
-        else:
-            await message.add_reaction('<:Pog:820015969966751815>')
     if message.author.id != 801119721407119411 and message.channel.id != 885594398669283331:
-        str = message.content
-  # if message.author.id == 390308146293243904:
-  #     await message.add_reaction('🐒')
-  # if message.author.id == 274656834315616256:
-  #     await message.add_reaction('<:cryingcat:796506331523055686>')
+        msgStr = ((message.content).lower()).split()
+
         if message.channel.id == 814613616950902834 and len(message.embeds) > 0:
             channel = client.get_channel(565401767416692747)
             embed = discord.Embed.copy(message.embeds[0])
             await channel.send(embed=embed)
+
+        # BEN
+        if 'ben' in msgStr:
+            if '?' in msgStr:
+                await message.channel.send(file=File("./data/ben/" + benResponse[random.randint(0,4)]))
+            elif 'bye' in msgStr:
+                await message.channel.send(file=File("./data/ben/slamphone.gif"))
+            elif 'ben' == msgStr:
+                await message.channel.send(file=File("./data/ben/benring.gif"))
+
+        # PASTAS
+        for x in pastas.triggers:
+            if x in msgStr:
+                index = pastas.triggers.index(str(x))
+                if './data/' in pastas.triggerResponse[index]:
+                    await message.channel.send(file=File(pastas.triggerResponse[index]))
+                else:
+                    message = await message.channel.send(pastas.triggerResponse[index])
+                if 'counter' == pastas.triggerResponse[index]:
+                    await message.add_reaction('👍')
+
+#-------deprecated-------#
+        # if 'goats' in msgStr:
+        #     await message.channel.send(pastas.goat)
         #
-        # for x in paster:
-        #     if x in str.lower():
-        #         paste = pastas.(x)
-        #         await message.channel.send(paste)
-
-
-# STANDALONE TRIGGERS
-        if 'cum' in str.lower():
-            # await message.add_reaction('👎')
-            await message.channel.send('cum')
-        if 'shadowplay' in str.lower():
-                await message.channel.send(file=File("./data/chadowplay.mp4"))
-        if 'scort' in str.lower() and message.author.id != 355144450437021697:
-                await message.channel.send(file=File("./data/Retard-lf8zQN6agAw.mp4"))
-        if 'mercy montage' in str.lower():
-                await message.channel.send(file=File("./data/MercyMontage-nMTj67b_Boc.mp4"))
-        if ' peak' in str.lower():
-                await message.channel.send(file=File("./data/KW2fX8VRPVwcPYUC.mp4"))
-        if 'cock' in str.lower():
-            await message.channel.send('and balls (never forget the balls.)')
-
-        if 'hampter' in str.lower():
-            await message.channel.send('https://tenor.com/view/hampter-gif-20240312')
+        # if 'ninja' in msgStr:
+        #     await message.channel.send(pastas.ninja)
+        #
+        # if 'innit' in msgStr:
+        #     await message.channel.send(pastas.innit)
+        #
+        # if 'kephrii' in msgStr:
+        #     await message.channel.send(pastas.kephrii)
+        #
+        # if 'based' in msgStr:
+        #     await message.channel.send(pastas.based)
+        #
+        # if 'simp' in msgStr:
+        #     await message.channel.send(pastas.simp)
+        #
+        # if 'pee' in msgStr:
+        #     await message.channel.send(pastas.pee)
+        #
+        # if 'furry' in msgStr:
+        #     await message.channel.send(pastas.furry)
+        #
+        # if 'cringe' in msgStr:
+        #     await message.channel.send(pastas.cringe)
+        #
+        # if 'flashy' in msgStr:
+        #     await message.channel.send(pastas.flashy)
+        #
+        # if 'what are you doing' in msgStr:
+        #     await message.channel.send('YO MAMA')
+        # old leave join shit
+        #
+        # if message.channel.id == 743941744927834133:
+        #     str = message.content
+        #
+        #     if 'gone' in str.lower():
+        #         await message.add_reaction('<:peepoSad:820015915676336180>')
+        #     else:
+        #         await message.add_reaction('<:Pog:820015969966751815>')
+        # if message.author.id == 390308146293243904:
+        #     await message.add_reaction('🐒')
+        # if message.author.id == 274656834315616256:
+        #     await message.add_reaction('<:cryingcat:796506331523055686>')
+        # if 'cum' in msgStr:
+        #     # await message.add_reaction('👎')
+        #     await message.channel.send('cum')
+        # if 'shadowplay' in msgStr:
+        #         await message.channel.send(file=File("./data/chadowplay.mp4"))
+        # if 'scort' in msgStr and message.author.id != 355144450437021697:
+        #         await message.channel.send(file=File("./data/Retard-lf8zQN6agAw.mp4"))
+        # if 'mercy montage' in msgStr:
+        #         await message.channel.send(file=File("./data/MercyMontage-nMTj67b_Boc.mp4"))
+        # if 'peak' in msgStr:
+        #         await message.channel.send(file=File("./data/KW2fX8VRPVwcPYUC.mp4"))
+        # if 'hampter' in msgStr:
+        #     await message.channel.send('https://tenor.com/view/hampter-gif-20240312')
         # if message.author.id == 66056020786425856:
         #     await message.channel.send('this you? https://cdn.discordapp.com/avatars/66056020786425856/dfa93feb88c85a0183eac633d95e3007.webp?size=2048')
-
-        if 'goats' in str.lower():
-            await message.channel.send(pastas.goat)
-
-        if 'ninja' in str.lower():
-            await message.channel.send(pastas.ninja)
-
-        if 'innit' in str.lower():
-            await message.channel.send(pastas.innit)
-
-        if 'kephrii' in str.lower():
-            await message.channel.send(pastas.kephrii)
-
-        if 'based' == str.lower():
-            await message.channel.send(pastas.based)
-
-        if 'simp' in str.lower() and 'simple' not in str.lower():
-            await message.channel.send(pastas.simp)
-
-        if 'pee ' in str.lower() or 'piss' in str.lower():
-            await message.channel.send(pastas.pee)
-
-        if 'furry' in str.lower():
-            await message.channel.send(pastas.furry)
-
-        if 'cringe' in str.lower():
-            await message.channel.send(pastas.cringe)
-
-        if 'flashy' in str.lower():
-            await message.channel.send(pastas.flashy)
-
-        if 'what are you doing' in str.lower():
-            await message.channel.send('YO MAMA')
 
 ## commands
 @client.command()
