@@ -48,7 +48,7 @@ async def on_message(message):
             elif 'bye' in message.content:
                 await message.channel.send(file=File("./data/ben/slamphone.gif"))
                 print("triggered ben bye")
-            elif 'ben' == message.content:
+            elif 'ben' == (message.content).lower():
                 await message.channel.send(file=File("./data/ben/benring.gif"))
                 print("triggered ben only")
 
