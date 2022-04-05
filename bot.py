@@ -204,7 +204,7 @@ async def _dolly(ctx):
 @commands.has_role('Frag Approver')
 async def approve(ctx):
     channel = client.get_channel(790682495167234080)
-    await channel.send(ctx.message.reference.resolved.content[7:] + " hit by " + ctx.message.reference.resolved.author.mention)
+    await channel.send(ctx.message.reference.resolved.content + " hit by " + ctx.message.reference.resolved.author.mention)
 
 @client.command()
 @commands.has_permissions(manage_messages=True)
