@@ -50,7 +50,7 @@ triggerResponse = [
 "./data/MercyMontage-nMTj67b_Boc.mp4",
 
 #scort
-"./data/Retard-lf8zQN6agAw.mp4",
+"https://tenor.com/view/tuner-tuner-gang-tuner-chat-tuner-server-an-access-tuner-gif-23570367",
 
 #ratio
 "counter",
