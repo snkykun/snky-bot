@@ -1,4 +1,4 @@
-triggers = ["goat", "innit", "based", "simp", "piss", "furry", "kephrii", "cringe", "flashy", "ninja", "what are you doing", "cock", "cum", "peak", "hampter", 'mercy', "scort", "ratio", "shadowplay", "overedit"]
+triggers = ["goat", "innit", "based", "simp", "piss", "furry", "kephrii", "cringe", "flashy", "ninja", "what are you doing", "cock", "cum", "peak", "hampter", 'mercy', "scort", "ratio", "shadowplay", "overedit", "kys"]
 triggerResponse = [
 
 #goat
@@ -59,6 +59,9 @@ triggerResponse = [
 "./data/chadowplay.mp4",
 
 #overedit
-"Alright my guy a word of advice. The editing is really well done but wayyyyy too much. You can still make things look cool without extreme effects because being honest i couldnt really see what happened most of the time. If you want a really good expressive way to edit some vids id suggest looking how andrewjrt does his indepth overwatch vids. He has some crazy great edits that arent over baring. But all in all great job im pretty sure youll be great at editing and making vids! But remember to tone it down a bit at some points. Find the perfect groove for you."
+"Alright my guy a word of advice. The editing is really well done but wayyyyy too much. You can still make things look cool without extreme effects because being honest i couldnt really see what happened most of the time. If you want a really good expressive way to edit some vids id suggest looking how andrewjrt does his indepth overwatch vids. He has some crazy great edits that arent over baring. But all in all great job im pretty sure youll be great at editing and making vids! But remember to tone it down a bit at some points. Find the perfect groove for you.",
+
+#kys
+"./data/WO5ogmyN8Vi11Hh_.mp4"
 
 ]
