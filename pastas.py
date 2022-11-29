@@ -1,4 +1,4 @@
-triggers = ["goat", "innit", "based", "simp", "piss", "furry", "kephrii", "cringe", "flashy", "ninja", "what are you doing", "cock", "cum", "peak", "hampter", 'mercy', "scort", "ratio", "shadowplay", "overedit", "kys"]
+triggers = ["goat", "innit", "based", "simp", "piss", "furry", "kephrii", "cringe", "flashy", "ninja", "what are you doing", "cock", "cum", "peak", "hampter", 'mercy', "scort", "ratio", "shadowplay", "overedit", "kys", "zoom"]
 triggerResponse = [
 
 #goat
@@ -62,6 +62,9 @@ triggerResponse = [
 "Alright my guy a word of advice. The editing is really well done but wayyyyy too much. You can still make things look cool without extreme effects because being honest i couldnt really see what happened most of the time. If you want a really good expressive way to edit some vids id suggest looking how andrewjrt does his indepth overwatch vids. He has some crazy great edits that arent over baring. But all in all great job im pretty sure youll be great at editing and making vids! But remember to tone it down a bit at some points. Find the perfect groove for you.",
 
 #kys
-"./data/WO5ogmyN8Vi11Hh_.mp4"
+"./data/WO5ogmyN8Vi11Hh_.mp4",
+
+#zoom
+"why is it zoomed in? because its an artistic choice, it looks very nice zoomed in and maybe you should zoomed in even more (perhaps 8x scale) and its not a mediocre edit with intense flicker all the way to the end with one framers and shake spams everywhere making you think that this is perhaps not a subject related video editing but just purely transition wrapped crafted and built with some random footage in the background and inbetween to make the transition looks very nice to watch (and edgy)"
 
 ]
