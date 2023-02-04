@@ -26,7 +26,7 @@ async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=custom)
     # await oec_gen.send('Bot is ready, cum to your hearts conent.')
     # await sai_gen.send('Bot is ready, time to post hampters.')
-picList = ["floppa", "possum"]
+picList = ["floppa", "possum", "cat", "monkey", ""]
 benResponse = ['eww.gif', 'laugh.gif', 'no.gif', 'slamphone.gif', 'yes.gif']
 
 #listener

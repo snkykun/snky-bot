@@ -1,4 +1,4 @@
-triggers = ["goat", "innit", "simp", "piss", "furry", "kephrii", "flashy", "ninja", "what are you doing", "cock", "cum", "peak", "hampter", 'mercy', "scort", "ratio", "shadowplay", "overedit", "kys", "zoom"]
+triggers = ["goat", "innit", "simp", "piss", "furry", "kephrii", "flashy", "ninja", "what are you doing", "cock", "cum", "peak", "hampter", 'mercy', "scort", "ratio", "shadowplay", "overedit", "kys", "zoom", "wanderer"]
 triggerResponse = [
 
 #goat
@@ -59,6 +59,9 @@ triggerResponse = [
 "./data/WO5ogmyN8Vi11Hh_.mp4",
 
 #zoom
-"why is it zoomed in? because its an artistic choice, it looks very nice zoomed in and maybe you should zoomed in even more (perhaps 8x scale) and its not a mediocre edit with intense flicker all the way to the end with one framers and shake spams everywhere making you think that this is perhaps not a subject related video editing but just purely transition wrapped crafted and built with some random footage in the background and inbetween to make the transition looks very nice to watch (and edgy)"
+"why is it zoomed in? because its an artistic choice, it looks very nice zoomed in and maybe you should zoomed in even more (perhaps 8x scale) and its not a mediocre edit with intense flicker all the way to the end with one framers and shake spams everywhere making you think that this is perhaps not a subject related video editing but just purely transition wrapped crafted and built with some random footage in the background and inbetween to make the transition looks very nice to watch (and edgy)",
+
+#wanderer
+"./data/wanderer.mp4"
 
 ]
