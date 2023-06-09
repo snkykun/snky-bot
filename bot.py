@@ -168,6 +168,11 @@ async def real(ctx):
     await ctx.message.delete()
 
 @client.command()
+async def say(ctx):
+    await ctx.channel.send(ctx.message)
+    await ctx.message.delete()
+
+@client.command()
 async def fym(ctx):
     if (ctx.message.mentions[0]).id == 801119721407119411:
         embed = discord.Embed(
