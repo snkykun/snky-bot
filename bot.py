@@ -169,7 +169,8 @@ async def real(ctx):
 
 @client.command()
 async def say(ctx):
-    await ctx.channel.send(ctx.message)
+    msg = ctx.message.content
+    await ctx.channel.send(msg)
     await ctx.message.delete()
 
 @client.command()
