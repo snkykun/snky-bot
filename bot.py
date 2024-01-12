@@ -54,19 +54,19 @@ async def on_message(message):
                 print("triggered ben only")
 
         # FIX TWITTER
-        if 'https://x.com' or 'https://twitter.com' in message.content:
-
-            xcom_pattern = r'https://x\.com/[^\s]+'
-            twitter_pattern = r'https://twitter\.com/[^\s]+'
-
-            xcom_match = re.search(xcom_pattern, message.content)
-            twitter_match = re.search(twitter_pattern, message.content)
-
-            # Replace the matched domain in the link
-            if xcom_match:
-                await message.channel.send(re.sub(r'https://x\.com/', 'https://fxtwitter.com/', xcom_match.group()))
-            elif twitter_match:
-                await message.channel.send(re.sub(r'https://twitter\.com/', 'https://fxtwitter.com/', twitter_match.group()))
+        # if 'https://x.com' or 'https://twitter.com' in message.content:
+        #
+        #     xcom_pattern = r'https://x\.com/[^\s]+'
+        #     twitter_pattern = r'https://twitter\.com/[^\s]+'
+        #
+        #     xcom_match = re.search(xcom_pattern, message.content)
+        #     twitter_match = re.search(twitter_pattern, message.content)
+        #
+        #     # Replace the matched domain in the link
+        #     if xcom_match:
+        #         await message.channel.send(re.sub(r'https://x\.com/', 'https://fxtwitter.com/', xcom_match.group()))
+        #     elif twitter_match:
+        #         await message.channel.send(re.sub(r'https://twitter\.com/', 'https://fxtwitter.com/', twitter_match.group()))
 
 
 
