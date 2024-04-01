@@ -50,7 +50,7 @@ async def on_message(message):
                 await message.channel.send(file=File("./data/ben/slamphone.gif"))
                 print("triggered ben bye")
             elif 'ben' == (message.content).lower():
-                await message.channel.send(file=File("./data/ben/benring.gif"))
+                await message.channel.send("https://tenor.com/view/ben-talking-ben-gif-24982337")
                 print("triggered ben only")
 
         # FIX TWITTER
@@ -123,7 +123,7 @@ async def on_message(message):
         #         await message.add_reaction('<:peepoSad:820015915676336180>')
         #     else:
         #         await message.add_reaction('<:Pog:820015969966751815>')
-        # if message.author.id == 390308146293243904:
+        # if message.author.id == 374004455206682625:
         #     await message.add_reaction('🐒')
         # if message.author.id == 274656834315616256:
         #     await message.add_reaction('<:cryingcat:796506331523055686>')
